@@ -4,6 +4,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="sample.css" type="text/css">
+<script>
+  function validate()
+  {
+    var first=document.f1.username1.value;
+ var pass=document.f1.password1.value;
+ if(first==""|| pass=="")
+   {
+       alert("Firstname/password  must be filled");
+       return false;
+   }
+  }
+</script>
 <style>
    body{
        background-image: url(suntop1.png);
@@ -31,7 +43,7 @@
   <div class="id">
   <center><h3> Enter Login Details</h3></center> 
   <br/>
-  <form name="f1" action="index.html" align="center">
+  <form name="f1" onsubmit="return validate()" action="OnlineBook.html" align="center">
   <table align="center">
   <tr> <td> User ID</td>
   <td> <input type="text" name="username1"></div></td> </tr>
